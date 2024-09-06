@@ -60,6 +60,7 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview "ls -color $realpath"
 
 alias ls="ls --color"
+alias vim="nvim"
 
 export PATH=$PATH:/home/onlinejudge95/.local/bin
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/atomic.omp.json)"
