@@ -31,3 +31,21 @@ lspconfig.pyright.setup({
   capabilities = capabilities,
   filetypes = {"python"},
 })
+
+lspconfig.tsserver.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {"javascript", "javascriptreact", "typescript", "typescriptreact"}
+})
+
+lspconfig.tailwindcss.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {"html", "css", "scss", "markdown", "mdx"}
+})
+
+lspconfig.eslint.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {"javascript", "javascriptreact", "typescript", "typescriptreact"}
+})
