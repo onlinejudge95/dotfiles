@@ -36,6 +36,23 @@ M.dap_go = {
   }
 }
 
+M.dap_python = {
+  plugin = true,
+  n = {
+    ["<leader>dpt"] = {
+      function ()
+        require("dap-python").debug_test()
+      end,
+      "Debug python test"
+    },
+    ["<leader>dpl"] = {
+      function ()
+        require("dap-python").debug_last()
+      end,
+      "Debug last python test"
+    },
+  }
+}
 M.gopher = {
   plugin = true,
   n = {
