@@ -1,0 +1,16 @@
+[init]
+	defaultBranch = main
+[user]
+	useConfigOnly = true
+[user "github"]
+	name = Mayank Pathak
+	email = onlinejudge95@gmail.com
+	signingkey = 34F4D13795099692
+[alias]
+	identity = "! git config user.name \"$(git config user.$1.name)\"; git config user.email \"$(git config user.$1.email)\"; git config user.signingkey \"$(git config user.$1.signingkey)\"; :"
+[commit]
+	gpgsign = true
+[push]
+	autoSetupRemote = true
+[core]
+	editor = nvim
