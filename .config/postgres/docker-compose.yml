@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:16.4
+    restart: always
+    environment:
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres-password
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    secrets:
+      - postgres-password
+
+volumes:
+  postgres-data:
+
+secrets:
+  postgres-password:
+    file: ~/.config/postgres/.secrets.postgres.password
