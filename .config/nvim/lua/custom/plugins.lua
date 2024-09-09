@@ -17,6 +17,7 @@ local plugins = {
         "tailwindcss-language-server",
         "eslint-lsp",
         "prettierd",
+        "docker-compose-language-service",
       }
     }
   },
@@ -107,6 +108,7 @@ local plugins = {
         "typescript",
         "tsx",
         "css",
+        "dockerfile",
       }
       return opts
     end

@@ -49,3 +49,8 @@ lspconfig.eslint.setup({
   capabilities = capabilities,
   filetypes = {"javascript", "javascriptreact", "typescript", "typescriptreact"}
 })
+
+lspconfig.docker_compose_language_service.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
