@@ -30,6 +30,7 @@ local plugins = {
   },
   {
     "nvimtools/none-ls.nvim",
+    event = "VeryLazy",
     opts = function()
       return require "custom.configs.null-ls"
     end,
@@ -67,7 +68,7 @@ local plugins = {
   {
     "mfussenegger/nvim-dap-python",
     ft = "python",
-    dependencies = {"mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui"},
+    dependencies = {"mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui", "nvim-neotest/nvim-nio"},
     config = function (_, opts)
       require("dap-go").setup("~/.local/share/nvim/mason/packages/debugpy/venv/bin/python")
       require("core.utils").load_mappings("dap_python")
