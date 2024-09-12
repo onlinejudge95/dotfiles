@@ -16,7 +16,8 @@ local plugins = {
         "tailwindcss-language-server",
         "eslint-lsp",
         "prettierd",
-        "docker-compose-language-service",
+        "dockerfile-language-server",
+        "templ",
       }
     }
   },

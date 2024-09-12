@@ -40,7 +40,7 @@ lspconfig.ruff.setup({
 lspconfig.tsserver.setup({
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = {"javascript", "javascriptreact", "typescript", "typescriptreact"}
+  filetypes = {"javascript", "javascriptreact", "typescript", "typescriptreact"},
 })
 
 lspconfig.tailwindcss.setup({
@@ -52,10 +52,16 @@ lspconfig.tailwindcss.setup({
 lspconfig.eslint.setup({
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = {"javascript", "javascriptreact", "typescript", "typescriptreact"}
+  filetypes = {"javascript", "javascriptreact", "typescript", "typescriptreact"},
 })
 
-lspconfig.docker_compose_language_service.setup({
+lspconfig.dockerls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
 })
+
+lspconfig.templ.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
+
