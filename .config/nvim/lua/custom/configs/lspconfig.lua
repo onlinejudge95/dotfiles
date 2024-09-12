@@ -37,10 +37,9 @@ lspconfig.ruff.setup({
   },
 })
 
-lspconfig.tsserver.setup({
+lspconfig.ts_ls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = {"javascript", "javascriptreact", "typescript", "typescriptreact"},
 })
 
 lspconfig.tailwindcss.setup({
@@ -61,6 +60,11 @@ lspconfig.dockerls.setup({
 })
 
 lspconfig.templ.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
+
+lspconfig.sqls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
 })
