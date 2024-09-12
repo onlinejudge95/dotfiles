@@ -111,6 +111,7 @@ local plugins = {
         "tsx",
         "css",
         "dockerfile",
+        "sql",
       }
       return opts
     end
