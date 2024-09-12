@@ -19,6 +19,7 @@ local plugins = {
         "dockerfile-language-server",
         "templ",
         "sqls",
+        "tflint",
       }
     }
   },
@@ -105,6 +106,10 @@ local plugins = {
       opts.ensure_installed = {
         "lua",
         "go",
+        "gomod",
+        "gosum",
+        "gotmpl",
+        "gowork",
         "python",
         "javascript",
         "typescript",
@@ -112,6 +117,15 @@ local plugins = {
         "css",
         "dockerfile",
         "sql",
+        "html",
+        "htmldjango",
+        "json",
+        "markdown",
+        "ssh_config",
+        "terraform",
+        "tmux",
+        "toml",
+        "yaml",
       }
       return opts
     end
