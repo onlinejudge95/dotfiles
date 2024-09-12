@@ -9,7 +9,6 @@ local plugins = {
         "goimports-reviser",
         "golines",
         "delve",
-        "pyright",
         "mypy",
         "ruff",
         "debugpy",

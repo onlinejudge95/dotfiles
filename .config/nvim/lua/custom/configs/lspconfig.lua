@@ -27,10 +27,14 @@ lspconfig.gopls.setup {
   },
 }
 
-lspconfig.pyright.setup({
+lspconfig.ruff.setup({
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = {"python"},
+  init_options = {
+    settings = {
+      configurationPreference = "filesystemFirst",
+    },
+  },
 })
 
 lspconfig.tsserver.setup({
