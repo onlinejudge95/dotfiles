@@ -33,7 +33,8 @@ zinit snippet OMZP::sudo
 zinit snippet OMZP::aws
 zinit snippet OMZP::command-not-found
 
-autoload -U compinit && compinit
+fpath+=~/.zfunc
+autoload -Uz compinit && compinit
 
 zinit cdreplay -q
 
