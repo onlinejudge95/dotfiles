@@ -6,13 +6,12 @@ fi
 
 source "${ZINIT_HOME}/zinit.zsh"
 
-NERD_FONTS_HOME="${HOME}/.local/share/fonts"
+NERD_FONTS_HOME="${HOME}/.fonts"
 if [ ! -d "$NERD_FONTS_HOME" ] ; then
 	mkdir --parents "$NERD_FONTS_HOME"
 	wget --directory-prefix /tmp https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/0xProto.zip
 	unzip -d "$NERD_FONTS_HOME" /tmp/0xProto.zip
 	rm /tmp/0xProto.zip
-	fc-cache --force
 fi
 
 FZF_HOME="${HOME}/.fzf"
@@ -30,7 +29,6 @@ zinit light Aloxaf/fzf-tab
 
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
-zinit snippet OMZP::aws
 zinit snippet OMZP::command-not-found
 
 autoload -U compinit && compinit
@@ -60,15 +58,9 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview "ls -color $realpath"
 
 alias ls="ls --color"
-alias vim="nvim"
 
-export PATH=$PATH:/home/onlinejudge95/.local/bin:/usr/local/go/bin
+export PATH=$PATH:/home/onlinejudge95/.local/bin
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/atomic.omp.json)"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 source ~/.config/custom/aliases.sh
 
-export PATH=$PATH:$(go env GOPATH)/bin
