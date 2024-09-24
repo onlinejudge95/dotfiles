@@ -6,10 +6,13 @@ local opts = {
     null_ls.builtins.formatting.gofumpt,
     null_ls.builtins.formatting.goimports_reviser,
     null_ls.builtins.formatting.golines,
-    -- null_ls.builtins.formatting.ruff,
-    -- null_ls.builtins.diagnostics.ruff,
-    null_ls.builtins.diagnostics.mypy,
     null_ls.builtins.formatting.prettierd,
+    null_ls.builtins.diagnostics.mypy.with({
+      extra_args = function ()
+        local executable = vim.fn.trim(vim.fn.system("poetry env info --executable"))
+        return { "--python-executable", executable}
+      end,
+    }),
   },
   on_attach = function (client, bufnr)
     if client.supports_method("textDocument/formatting") then
