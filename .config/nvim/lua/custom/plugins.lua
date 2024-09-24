@@ -72,7 +72,7 @@ local plugins = {
     ft = "python",
     dependencies = {"mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui", "nvim-neotest/nvim-nio"},
     config = function (_, opts)
-      require("dap-go").setup("~/.local/share/nvim/mason/packages/debugpy/venv/bin/python")
+      require("dap-python").setup("~/.local/share/nvim/mason/packages/debugpy/venv/bin/python")
       require("core.utils").load_mappings("dap_python")
     end
   },
