@@ -75,3 +75,5 @@ export NVM_DIR="$HOME/.nvm"
 source ~/.config/custom/aliases.sh
 
 export PATH=$PATH:$(go env GOPATH)/bin
+
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
