@@ -41,7 +41,6 @@ zinit cdreplay -q
 bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
-
 eval "$(register-python-argcomplete pipx)"
 
 HISTSIZE=5000
@@ -49,6 +48,7 @@ HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
 
+setopt interactivecomments
 setopt appendhistory
 setopt sharehistory
 setopt hist_ignore_space
