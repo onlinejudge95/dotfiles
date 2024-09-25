@@ -62,5 +62,4 @@ alias ls="ls --color"
 export PATH=$PATH:/home/onlinejudge95/.local/bin
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/atomic.omp.json)"
 
-source ~/.config/custom/aliases.sh
-
+source ~/.zfunc/aliases.zsh
