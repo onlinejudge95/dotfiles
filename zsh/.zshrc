@@ -66,6 +66,7 @@ alias ls="ls --color"
 alias vim="nvim"
 
 export PATH=$PATH:/home/onlinejudge95/.local/bin:/usr/local/go/bin
+mkdir --parents ~/.config/ohmyposh
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/atomic.omp.json)"
 
 export NVM_DIR="$HOME/.nvm"
