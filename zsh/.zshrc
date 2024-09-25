@@ -23,6 +23,9 @@ if [ ! -d "$FZF_HOME" ]; then
 fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+source ~/.zfunc/functions.zsh
+seed_conf_directories
+
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
