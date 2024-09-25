@@ -71,7 +71,7 @@ eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/atomic.omp.json)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-source ~/.config/custom/aliases.sh
+source ~/.zfunc/aliases.zsh
 
 export PATH=$PATH:$(go env GOPATH)/bin
 
