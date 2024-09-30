@@ -64,13 +64,13 @@ lspconfig.templ.setup({
   capabilities = capabilities,
 })
 
-lspconfig.sqls.setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
-})
-
-lspconfig.tflint.setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
-})
-
+-- lspconfig.sqls.setup({
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+-- })
+--
+-- lspconfig.tflint.setup({
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+-- })
+--

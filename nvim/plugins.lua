@@ -18,8 +18,8 @@ local plugins = {
         "prettierd",
         "dockerfile-language-server",
         "templ",
-        "sqls",
-        "tflint",
+        -- "sqls",
+        -- "tflint",
       }
     }
   },
