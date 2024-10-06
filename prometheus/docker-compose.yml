@@ -9,12 +9,9 @@ services:
     ports:
       - 9090:9090
     volumes:
-      - prometheus-data:/prometheus
+      - /media/onlinejudge95/data-disk-1:/prometheus
 
 configs:
   prometheus_config:
     file: config/prometheus.yml.tpl
     template_driver: golang
-
-volumes:
-  prometheus-data:
