@@ -9,7 +9,7 @@ services:
     ports:
       - 9090:9090
     volumes:
-      - /media/onlinejudge95/data-disk-1:/prometheus
+      - /media/onlinejudge95/data-disk-1/prometheus:/prometheus
 
 configs:
   prometheus_config:

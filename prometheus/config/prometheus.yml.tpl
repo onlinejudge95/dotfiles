@@ -6,3 +6,6 @@ scrape_configs:
   - job_name: prometheus
     static_configs:
       - targets: ["localhost:9090"]
+  - job_name: node
+    static_configs:
+      - targets: ["192.168.31.35:9100"]
