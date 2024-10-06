@@ -1,0 +1,20 @@
+services:
+  prometheus:
+    image: prom/prometheus:v2.54.0
+    command: "--config.file=/etc/prometheus/prometheus.yml"
+    user: root:root
+    configs:
+      - source: prometheus_config
+        target: /etc/prometheus/prometheus.yml
+    ports:
+      - 9090:9090
+    volumes:
+      - prometheus-data:/prometheus
+
+configs:
+  prometheus_config:
+    file: config/prometheus.yml.tpl
+    template_driver: golang
+
+volumes:
+  prometheus-data:
