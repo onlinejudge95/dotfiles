@@ -2,3 +2,4 @@ alias wecoachdb="psql --host wecoach.cpq82ioic0rr.ap-south-1.rds.amazonaws.com -
 alias dc-postgres="docker compose --file ~/.config/postgres/docker-compose.yml"
 alias cna="npx create-next-app --typescript --tailwind --eslint --app --use-yarn"
 alias yd="yarn lint && yarn format && yarn build && yarn dev"
+alias kubectl="microk8s kubectl"
