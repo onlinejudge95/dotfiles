@@ -15,7 +15,6 @@ We can install both of the above using `sudo apt install git stow` command
 
 ## Configurations
 
-- Tmux `stow tmux`
 - Git `stow git`
 - ZShell `stow zsh`
 - OhMyPosh Theme `stow --target ~/.config/ohmyposh/ ohmyposh`
