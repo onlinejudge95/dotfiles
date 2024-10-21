@@ -1,8 +1,0 @@
-services:
-  grafana:
-    image: grafana/grafana-oss:11.2.2
-    user: root:root
-    ports:
-      - 3000:3000
-    volumes:
-      - /media/onlinejudge95/data-disk-1/grafana:/var/lib/grafana
