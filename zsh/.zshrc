@@ -80,3 +80,7 @@ source ~/.zfunc/aliases.zsh
 export PATH=$PATH:$(go env GOPATH)/bin
 
 fpath+=~/.zfunc; autoload -Uz compinit; compinit
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
