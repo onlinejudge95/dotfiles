@@ -7,3 +7,8 @@ krefresh() {
 
   lxc file pull $node/etc/kubernetes/admin.conf ~/.kube/config
 }
+
+dev-session() {
+  local repo=$1
+  nohup kitty --session "~/.config/kitty/sessions/$repo.conf" > /dev/null 2>&1 & disown 
+}
