@@ -9,6 +9,13 @@ krefresh() {
 }
 
 dev-session() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: dev-session REPO"
+    echo "Supported repos: dicehub|dotfiles|portfolio"
+    return 1
+  fi
+
   local repo=$1
+
   nohup kitty --session "~/.config/kitty/sessions/$repo.conf" > /dev/null 2>&1 & disown 
 }
