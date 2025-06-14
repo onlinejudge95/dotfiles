@@ -11,7 +11,7 @@ krefresh() {
 dev-session() {
   if [[ -z "$1" ]]; then
     echo "Usage: dev-session REPO"
-    echo "Supported repos: dicehub|dotfiles|portfolio|invite"
+    echo "Supported repos: dicehub|dotfiles|portfolio|invite|workout"
     return 1
   fi
 
