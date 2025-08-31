@@ -1,3 +1,4 @@
+# Install zinit
 ZINIT_HOME="${XDA_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 if [ ! -d "$ZINIT_HOME" ]; then
 	mkdir --parents "$(dirname $ZINIT_HOME)"
@@ -5,23 +6,6 @@ if [ ! -d "$ZINIT_HOME" ]; then
 fi
 
 source "${ZINIT_HOME}/zinit.zsh"
-
-NERD_FONTS_HOME="${HOME}/.local/share/fonts"
-if [ ! -d "$NERD_FONTS_HOME" ] ; then
-	mkdir --parents "$NERD_FONTS_HOME"
-	wget --directory-prefix /tmp https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/0xProto.zip
-	unzip -d "$NERD_FONTS_HOME" /tmp/0xProto.zip
-	rm /tmp/0xProto.zip
-	fc-cache --force
-fi
-
-FZF_HOME="${HOME}/.fzf"
-if [ ! -d "$FZF_HOME" ]; then
-	mkdir --parents "$FZF_HOME"
-	git clone --depth 1 https://github.com/junegunn/fzf.git "$FZF_HOME"
-	bash ${FZF_HOME}/install
-fi
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source ~/.zfunc/functions.zsh
 seed_conf_directories
@@ -40,6 +24,25 @@ fpath+=~/.zfunc
 autoload -Uz compinit && compinit
 
 zinit cdreplay -q
+
+# Install nerd fonts
+NERD_FONTS_HOME="${HOME}/.local/share/fonts"
+if [ ! -d "$NERD_FONTS_HOME" ] ; then
+	mkdir --parents "$NERD_FONTS_HOME"
+	wget --directory-prefix /tmp https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/0xProto.zip
+	unzip -d "$NERD_FONTS_HOME" /tmp/0xProto.zip
+	rm /tmp/0xProto.zip
+	fc-cache --force
+fi
+
+# Install FuzzyFinder
+FZF_HOME="${HOME}/.fzf"
+if [ ! -d "$FZF_HOME" ]; then
+	mkdir --parents "$FZF_HOME"
+	git clone --depth 1 https://github.com/junegunn/fzf.git "$FZF_HOME"
+	bash ${FZF_HOME}/install
+fi
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 bindkey -e
 bindkey '^p' history-search-backward
@@ -84,3 +87,5 @@ fpath+=~/.zfunc; autoload -Uz compinit; compinit
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+eval "$(uv generate-shell-completion zsh)"
