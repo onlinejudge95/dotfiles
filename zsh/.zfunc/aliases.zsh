@@ -6,3 +6,12 @@ alias k="microk8s kubectl"
 alias icat="kitten icat"
 alias diff="kitten diff"
 alias n8n="docker container run --interactive --tty --rm --name n8n --publish 5678:5678 --env GENERIC_TIMEZONE=Asia/Kolkata --env TZ=Asia/Kolkata --env N8N_ENFORCE_SETTINGS_FILE_PERMISSION=true --env N8N_RUNNERS_ENABLED=true --volume n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n"
+alias siril="/usr/local/bin/Siril-1.4.3-x86_64.AppImage"
+alias graxpert="/usr/local/bin/GraXpert-linux/GraXpert"
+alias autostakkert="wine /usr/local/bin/AutoStakkert_4.0.11_x64/AutoStakkert.exe"
+alias dss="/opt/DeepSkyStacker/DeepSkyStacker"
+alias terraform="docker compose run --rm terraform"
+
+# PostgreSQL aliases
+alias createdb="docker compose --file ~/.config/postgresql/docker-compose.yaml run --interactive --rm --tty postgres createdb"
+alias psql="docker compose --file ~/.config/postgresql/docker-compose.yaml run --interactive --rm --tty postgres psql"
