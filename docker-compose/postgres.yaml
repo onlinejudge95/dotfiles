@@ -25,6 +25,10 @@ services:
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@localhost.com
       PGADMIN_DEFAULT_PASSWORD: password
+  pgloader:
+    image: dimitri/pgloader:v3.6.7
+    networks:
+      - postgres
 
 networks:
   postgres:
