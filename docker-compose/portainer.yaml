@@ -1,0 +1,19 @@
+services:
+  portainer:
+    image: portainer/portainer-ce:2.45.0-alpine
+    restart: unless-stopped
+    networks:
+      - portainer
+    ports:
+      # - 8000:8000 # Only used for managing remote/edge environments
+      - 9443:9443
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+
+networks:
+  portainer:
+    driver: bridge
+
+volumes:
+  portainer_data:
