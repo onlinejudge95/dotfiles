@@ -1,5 +1,5 @@
 seed_conf_directories () {
-  mkdir --parents ~/.config/{ohmyposh,postgres,nvim/lua/custom,postgresql}
+  mkdir --parents ~/.config/{ohmyposh,postgres,nvim/lua/custom,docker-compose}
 }
 
 krefresh() {
@@ -20,7 +20,3 @@ dev-session() {
   nohup kitty --session "~/.config/kitty/sessions/$repo.conf" > /dev/null 2>&1 & disown 
 }
 
-start_pg() {
-  docker compose --file ~/.config/postgresql/docker-compose.yaml pull
-  docker compose --file ~/.config/postgresql/docker-compose.yaml up
-}
