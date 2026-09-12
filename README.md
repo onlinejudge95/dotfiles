@@ -21,3 +21,4 @@ We can install both of the above using `sudo apt install git stow` command
 - OhMyPosh Theme `stow --target ~/.config/ohmyposh/ ohmyposh`
 - Nvim `stow --target ~/.config/nvim/lua/custom/ nvim`
 - Docker-Compose `stow --target ~/.config/docker-compose/ docker-compose`
+- Psqlrc `stow psql`

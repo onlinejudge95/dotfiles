@@ -13,4 +13,5 @@ alias dss="/opt/DeepSkyStacker/DeepSkyStacker"
 alias terraform="docker compose run --rm terraform"
 
 # PostgreSQL aliases
+alias psql="docker compose --file ~/.config/docker-compose/postgres.yaml exec psql psql"
 alias pgloader="docker compose --file ~/.config/docker-compose/postgres.yaml run --interactive --rm --tty pgloader pgloader"

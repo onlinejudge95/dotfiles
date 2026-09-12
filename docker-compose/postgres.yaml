@@ -3,6 +3,18 @@ networks:
     external: true
 
 services:
+  psql:
+    image: postgres:18.6-bookworm
+    shm_size: 1gb
+    networks:
+      - postgres_postgres
+    volumes:
+      - ~/.psqlrc:/etc/postgresql-common/.psqlrc:ro
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
   pgloader:
     image: dimitri/pgloader:v3.6.7
     networks:
