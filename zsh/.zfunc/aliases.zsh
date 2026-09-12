@@ -10,8 +10,10 @@ alias siril="/usr/local/bin/Siril-1.4.3-x86_64.AppImage"
 alias graxpert="/usr/local/bin/GraXpert-linux/GraXpert"
 alias autostakkert="wine /usr/local/bin/AutoStakkert_4.0.11_x64/AutoStakkert.exe"
 alias dss="/opt/DeepSkyStacker/DeepSkyStacker"
-alias terraform="docker compose run --rm terraform"
 
 # PostgreSQL aliases
 alias psql="docker compose --file ~/.config/docker-compose/postgres.yaml exec psql psql"
 alias pgloader="docker compose --file ~/.config/docker-compose/postgres.yaml run --interactive --rm --tty pgloader pgloader"
+
+# Terraform aliases
+alias terraform="docker compose --file ~/.config/docker-compose/terraform.yaml run --interactive --rm --tty terraform"
