@@ -12,7 +12,7 @@ alias autostakkert="wine /usr/local/bin/AutoStakkert_4.0.11_x64/AutoStakkert.exe
 alias dss="/opt/DeepSkyStacker/DeepSkyStacker"
 
 # PostgreSQL aliases
-alias psql="docker compose --file ~/.config/docker-compose/postgres.yaml exec psql psql"
+alias psql="docker compose --file ~/.config/docker-compose/postgres.yaml run --interactive --rm --tty psql psql"
 alias pgloader="docker compose --file ~/.config/docker-compose/postgres.yaml run --interactive --rm --tty pgloader pgloader"
 
 # Terraform aliases

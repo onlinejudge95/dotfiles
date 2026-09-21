@@ -4,7 +4,7 @@ networks:
 
 services:
   psql:
-    image: 479190002620.dkr.ecr.ap-south-1.amazonaws.com/homelab/postgres:18
+    image: 479190002620.dkr.ecr.ap-south-1.amazonaws.com/homelab/postgres-client:18
     shm_size: 1gb
     networks:
       - postgres_postgres
