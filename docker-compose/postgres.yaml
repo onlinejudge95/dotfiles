@@ -3,7 +3,7 @@ networks:
     external: true
 
 services:
-  psql:
+  postgres-client:
     image: 479190002620.dkr.ecr.ap-south-1.amazonaws.com/homelab/postgres-client:18
     shm_size: 1gb
     networks:
